@@ -1,9 +1,11 @@
 import { Flex } from "@chakra-ui/react";
 import { useState } from "react";
+import { CardProject } from "../CardProject";
+import { Tags } from "../Tags";
 import { CardC } from "../Xp";
 
-export function XpList() {
-  const [experience] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
+export function ProjectListCard() {
+  const [project] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
   return (
     <Flex
       padding="1rem"
@@ -22,11 +24,19 @@ export function XpList() {
         },
       }}
     >
-      {experience.map(() => (
+      {project.map(() => (
         <>
           <CardC
-            ocupation="Desenvolvedora Front-end ReactJs"
-            divider={<>|</>}
+            height="400px"
+            width="400px"
+            company="Name repo"
+            childrenBottom={
+              <>
+                <Tags maxWidth="100px" colorScheme="blue" />
+                <Tags maxWidth="100px" colorScheme="blue" />
+                <Tags maxWidth="100px" colorScheme="blue" />
+              </>
+            }
           />
         </>
       ))}

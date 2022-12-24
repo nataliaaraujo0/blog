@@ -1,8 +1,9 @@
 import { Flex } from "@chakra-ui/react";
 import { useState } from "react";
+import { Tags } from "../Tags";
 import { CardC } from "../Xp";
 
-export function XpList() {
+export function CardProject() {
   const [experience] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
   return (
     <Flex
@@ -24,11 +25,7 @@ export function XpList() {
     >
       {experience.map(() => (
         <>
-          <CardC
-            ocupation="Desenvolvedora Front-end ReactJs"
-            divider={<>|</>}
-          />
-        </>
+          
       ))}
     </Flex>
   );
