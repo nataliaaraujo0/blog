@@ -13,13 +13,13 @@ import { Profile } from "../Profile";
 import { Tags } from "../Tags";
 
 type LayoutProps = {
-  title: string;
-  nameRepo: string;
-  nameProject: string;
-  xp: string;
-  children: ReactElement;
-  children2: ReactElement;
-  children3: ReactElement;
+  title?: string;
+  nameRepo?: string;
+  nameProject?: string;
+  xp?: string;
+  children?: ReactElement;
+  children2?: ReactElement;
+  children3?: ReactElement;
 };
 export function Layout({
   title = "Sobre o meu trabalho",
@@ -55,17 +55,17 @@ export function Layout({
           </TabList>
           <TabPanels>
             <TabPanel>
-              <Flex bg="purple.900" maxWidth="895px" h="600px">
+              <Flex maxWidth="895px" h="600px">
                 {children}
               </Flex>
             </TabPanel>
             <TabPanel>
-              <Flex bg="purple.800" maxWidth="895px" h="600px">
+              <Flex maxWidth="895px" h="600px">
                 {children2}
               </Flex>
             </TabPanel>
             <TabPanel>
-              <Flex bg="purple.700" maxWidth="895px" h="600px">
+              <Flex maxWidth="895px" h="600px">
                 {children3}
               </Flex>
             </TabPanel>
