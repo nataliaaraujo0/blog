@@ -8,7 +8,7 @@ import {
   Tabs,
   Text,
 } from "@chakra-ui/react";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import { Profile } from "../Profile";
 import { Tags } from "../Tags";
 
@@ -30,12 +30,21 @@ export function Layout({
   children2,
   children3,
 }: LayoutProps) {
+  const [tags] = useState([
+    { titleTag: "ReactJS" },
+    { titleTag: "Typescript" },
+    { titleTag: "RestAPI" },
+  ]);
   return (
     <Flex h="100vh" padding="1rem">
       <Flex w="357px" alignItems="center" h="100vh" flexDir="column" gap="4px">
         <Profile />
         <Divider marginBottom="32px" width="320px" />
-        <Tags />
+        {tags.map((tag) => (
+          <>
+            <Tags titleTag={tag.titleTag} />
+          </>
+        ))}
       </Flex>
       <Flex w="90%" h="100vh" marginLeft="42px" flexDir="column">
         <Text fontWeight="bold" fontSize="2.2rem">

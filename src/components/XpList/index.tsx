@@ -1,7 +1,9 @@
 import { Flex } from "@chakra-ui/react";
+import { useState } from "react";
 import { Xp } from "../Xp";
 
 export function XpList() {
+  const [experience] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
   return (
     <Flex
       padding="1rem"
@@ -20,15 +22,11 @@ export function XpList() {
         },
       }}
     >
-      <Xp />
-      <Xp />
-      <Xp />
-      <Xp />
-      <Xp />
-      <Xp />
-      <Xp />
-      <Xp />
-      <Xp />
+      {experience.map(() => (
+        <>
+          <Xp />
+        </>
+      ))}
     </Flex>
   );
 }

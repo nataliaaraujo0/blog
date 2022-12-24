@@ -1,9 +1,9 @@
 import { Tag } from "@chakra-ui/react";
 
 type TagsProps = {
-  title?: string;
+  titleTag?: string;
 };
-export function Tags({ title = "title" }: TagsProps) {
+export function Tags({ titleTag = "title" }: TagsProps) {
   return (
     <>
       <Tag
@@ -13,7 +13,7 @@ export function Tags({ title = "title" }: TagsProps) {
         borderRadius="4px"
         height="32px"
       >
-        {title}
+        {titleTag}
       </Tag>
     </>
   );
