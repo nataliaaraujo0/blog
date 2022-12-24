@@ -9,9 +9,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 type XpProps = {
-  ocupation: string;
-  company: string;
-  description: string;
+  ocupation?: string;
+  company?: string;
+  description?: string;
 };
 
 export function Xp({
