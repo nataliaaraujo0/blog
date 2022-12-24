@@ -11,7 +11,11 @@ export function Profile({
   return (
     <>
       <Box marginBottom="32px">
-        <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
+        <Image
+          src="https://bit.ly/dan-abramov"
+          alt="Dan Abramov"
+          borderRadius="3px"
+        />
         <Text fontSize="1.5rem" fontWeight="bold">
           {name}
         </Text>
