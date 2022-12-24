@@ -12,6 +12,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { ReactElement } from "react";
+import { Tags } from "../Tags";
 
 type LayoutProps = {
   Name: string;
@@ -46,42 +47,8 @@ export function Layout({
           <Text fontSize="1.1rem">{ocupation}</Text>
         </Box>
         <Divider marginBottom="32px" width="320px" />
-        <Tag
-          variant="solid"
-          w="90%"
-          colorScheme="pink"
-          borderRadius="4px"
-          height="32px"
-        >
-          ReactJs
-        </Tag>
-        <Tag
-          variant="solid"
-          w="90%"
-          colorScheme="pink"
-          borderRadius="4px"
-          height="32px"
-        >
-          ReactJs
-        </Tag>
-        <Tag
-          variant="solid"
-          w="90%"
-          colorScheme="pink"
-          borderRadius="4px"
-          height="32px"
-        >
-          ReactJs
-        </Tag>
-        <Tag
-          variant="solid"
-          w="90%"
-          colorScheme="pink"
-          borderRadius="4px"
-          height="32px"
-        >
-          ReactJs
-        </Tag>
+        <Tags />
+        <Tags />
       </Flex>
       <Flex w="90%" h="100vh" marginLeft="42px" flexDir="column">
         <Text fontWeight="bold" fontSize="2.2rem">
