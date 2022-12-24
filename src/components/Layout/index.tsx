@@ -49,7 +49,7 @@ export function Layout({
             <Tab w="150px" bg="purple.700" borderRadius="4px">
               {nameProject}
             </Tab>
-            <Tab isDisabled w="150px" bg="purple.700" borderRadius="4px">
+            <Tab w="150px" bg="purple.700" borderRadius="4px">
               {xp}
             </Tab>
           </TabList>
