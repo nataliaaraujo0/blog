@@ -1,15 +1,13 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Grid, GridItem } from "@chakra-ui/react";
 import { useState } from "react";
-import { Tags } from "../Tags";
-import { CardC } from "../Xp";
+import { RepoCard } from "../RepoCard";
 
-export function CardProject() {
-  const [experience] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
+export function RepoListCard() {
+  const [repos] = useState([1, 2]);
   return (
     <Flex
       padding="1rem"
       overflowY="scroll"
-      flexDir="column"
       gap="8px"
       sx={{
         "&::-webkit-scrollbar": {
@@ -23,9 +21,10 @@ export function CardProject() {
         },
       }}
     >
-      {experience.map(() => (
+      {repos.map(() => (
         <>
-          
+          <RepoCard />
+        </>
       ))}
     </Flex>
   );

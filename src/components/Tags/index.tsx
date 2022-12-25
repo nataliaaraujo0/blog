@@ -1,12 +1,14 @@
-import { Flex, Tag } from "@chakra-ui/react";
+import { Tag } from "@chakra-ui/react";
 
 type TagsProps = {
   titleTag?: string;
   width?: string;
   maxWidth?: string;
   colorScheme?: string;
+  padding?: string;
 };
 export function Tags({
+  padding,
   titleTag = "ReactJs",
   width = "90%",
   maxWidth,
@@ -14,6 +16,7 @@ export function Tags({
 }: TagsProps) {
   return (
     <Tag
+      padding={padding}
       variant="solid"
       w={width}
       maxWidth={maxWidth}

@@ -9,7 +9,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { ReactElement } from "react";
+
 type XpProps = {
+  flexDir?: any;
   ocupation?: string;
   company?: string;
   divider?: ReactElement;
@@ -20,6 +22,7 @@ type XpProps = {
 };
 
 export function CardC({
+  flexDir = "column",
   ocupation,
   company = "YAZO",
   divider,
@@ -32,7 +35,7 @@ export function CardC({
     <Card bg="purple.900" w={width} h={height} borderRadius="6px">
       <CardBody>
         <Stack divider={<StackDivider />} spacing="4">
-          <Box>
+          <Flex flexDirection={flexDir}>
             <Heading size="xs" textTransform="uppercase" color="white">
               <strong style={{ color: "#cf5192" }}> {company}</strong> {divider}
               {ocupation}
@@ -41,7 +44,7 @@ export function CardC({
               {description}
             </Text>
             <Flex gap="8px">{childrenBottom}</Flex>
-          </Box>
+          </Flex>
         </Stack>
       </CardBody>
     </Card>

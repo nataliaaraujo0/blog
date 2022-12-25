@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import { useState } from "react";
-import { CardProject } from "../CardProject";
+
 import { Tags } from "../Tags";
 import { CardC } from "../Xp";
 
